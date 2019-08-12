@@ -56,11 +56,13 @@ function prepareData(items) {
             cleanSortData = sortMoney(cleanSortData, i, i + count)
     }
 
+
     place = 1
-    var i = 0
-    while (i != cleanSortData.length - 1) {
+    var i = 1
+    cleanSortData[0].place = place;
+    while (i != cleanSortData.length) {
         cleanSortData[i].place = place
-        if (cleanSortData[i].rate != cleanSortData[i + 1].rate || cleanSortData[i].money != cleanSortData[i + 1].money) {
+        if (cleanSortData[i].rate != cleanSortData[i - 1].rate || cleanSortData[i].money != cleanSortData[i - 1].money) {
             place++
         }
         i++
