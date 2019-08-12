@@ -61,10 +61,10 @@ function prepareData(items) {
     var i = 1
     cleanSortData[0].place = place;
     while (i != cleanSortData.length) {
-        cleanSortData[i].place = place
         if (cleanSortData[i].rate != cleanSortData[i - 1].rate || cleanSortData[i].money != cleanSortData[i - 1].money) {
             place++
         }
+        cleanSortData[i].place = place
         i++
     }
 
